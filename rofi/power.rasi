@@ -1,0 +1,32 @@
+@import "soap.rasi"
+
+window {
+    fullscreen:         true;
+    width:              100%;
+    background-color:   #1c121ecc;
+    border:             0;
+    border-radius:      0;
+}
+
+mainbox {
+    children:           [listview];
+    expand:             true;
+    padding:            38% 38%;
+}
+
+inputbar {
+    enabled:            false;
+}
+
+listview {
+    lines:              5;
+    padding:            12px;
+    background-color:   #2c1c2e;
+    border:             2px solid;
+    border-color:       #4f3252;
+    border-radius:      14px;
+}
+
+element-text {
+    font:               "JetBrains Mono Nerd Font Medium 14";
+}

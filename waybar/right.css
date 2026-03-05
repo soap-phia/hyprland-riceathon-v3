@@ -1,0 +1,65 @@
+#tray,
+#network,
+#pulseaudio,
+#battery,
+#clock,
+#custom-notification {
+    padding: 0 10px;
+    color: #f8c2fb;
+}
+
+#tray {
+	padding: 0 8px 0 4px;
+}
+
+#tray>.passive {
+	-gtk-icon-effect: dim;
+}
+
+#battery {
+	color: #ace6b4;
+}
+
+#battery.warning {
+	color: #f9dca1;
+}
+
+#battery.critical {
+	color: #f38fad;
+	animation: blink 1s linear infinite;
+}
+
+#battery.charging {
+	color: #a2e6d6;
+}
+
+#custom-notification {
+	font-size: 16px;
+	padding: 0 14px 0 10px;
+    margin-right: 4px;
+}
+
+#custom-notification:hover {
+	color: #ebaaee;
+	background: #3d2740;
+	border-radius: 12px;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-notification {
+	color: #a167a5;
+	padding: 0 15px 0 9px; /* dumbass unicode */
+}
+
+#custom-power {
+	color: #f38fad;
+	font-size: 16px;
+	padding: 0 12px 0 10px;
+	margin-right: 4px;
+}
+
+#custom-power:hover {
+	color: #fde8ff;
+	background: #3d2740;
+	border-radius: 12px;
+}

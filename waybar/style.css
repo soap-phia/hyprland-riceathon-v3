@@ -1,0 +1,44 @@
+@import url('./left.css');
+@import url('./center.css');
+@import url('./right.css');
+
+* {
+	font-family: "JetBrains Mono Nerd Font", "Noto Sans", monospace;
+	font-size: 13px;
+	font-weight: 500;
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+window#waybar {
+	background: transparent;
+	color: #fde8ff;
+}
+
+tooltip {
+	background: #2c1c2e;
+	border: 1px solid #4f3252;
+	border-radius: 10px;
+	color: #fde8ff;
+	padding: 6px 10px;
+}
+
+tooltip label {
+	color: #fde8ff;
+}
+
+.modules-left,
+.modules-right {
+	background: #2c1c2e;
+	border-radius: 14px;
+	border: 2px solid #4f3252;
+	padding: 6px 6px;
+	margin: 4px 0;
+}
+
+#custom-separator {
+	color: #4f3252;
+}

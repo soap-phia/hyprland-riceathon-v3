@@ -1,0 +1,59 @@
+#custom-launcher,
+#workspaces,
+#window {
+    padding: 0 10px;
+    color: #fde8ff;
+}
+
+#custom-launcher {
+	color: #d698e6;
+	font-size: 18px;
+	padding: 0 14px 0 10px;
+	margin-right: 4px;
+}
+
+#custom-launcher:hover {
+	color: #ebaaee;
+	background: #3d2740;
+	border-radius: 12px;
+    margin-right: 4px;
+}
+
+#workspaces {
+	padding: 0 4px;
+}
+
+#workspaces button {
+	color: #a167a5;
+	background: transparent;
+	padding: 3px 10px 3px 6px;
+	margin: 6px 2px;
+	border-radius: 8px;
+	font-size: 14px;
+	transition: all 0.2s ease;
+	min-width: 0;
+}
+
+#workspaces button:hover {
+	background: #3d2740;
+	box-shadow: inherit;
+}
+
+#workspaces button.active {
+	color: #f8c2fb;
+	background: #4f3252;
+	font-size: 15px;
+}
+
+#workspaces button.urgent {
+	color: #f38fad;
+	background: #3d2740;
+	animation: blink 1s linear infinite;
+}
+
+#window {
+	color: #f8c2fb;
+	font-size: 12px;
+	padding: 0 12px 0 8px;
+	margin-left: 4px;
+}

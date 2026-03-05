@@ -1,0 +1,24 @@
+#custom-media {
+	background: #2c1c2e;
+	border-radius: 14px;
+	border: 2px solid #4f3252;
+	padding: 6px 6px;
+	margin: 4px 0;
+    color: #ace6b4;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+#custom-media:hover {
+    color: #bcbaef;
+    background: #3d2740;
+}
+
+#custom-media.paused {
+    color: #a167a5;
+}
+
+#custom-media:not(.playing):not(.paused) {
+    background: transparent;
+    border: 0 solid transparent;
+}

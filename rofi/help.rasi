@@ -1,0 +1,22 @@
+@import "soap.rasi"
+
+window {
+    width:              640;
+}
+
+inputbar {
+    children:           [prompt, entry];
+}
+
+prompt {
+    text-color:         @accent;
+}
+
+listview {
+    lines:              20;
+    scrollbar:          false;
+}
+
+element-text {
+    font:               "JetBrains Mono Nerd Font 11";
+}
