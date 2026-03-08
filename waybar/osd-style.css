@@ -1,0 +1,31 @@
+* {
+	font-family: "JetBrains Mono Nerd Font", "Noto Sans", monospace;
+	font-size: 16px;
+	font-weight: 500;
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+#custom-osd {
+	background: #2c1c2e;
+	border-radius: 14px;
+	border: 2px solid #4f3252;
+	padding: 14px 18px;
+	margin: 0;
+	color: #d698e6;
+}
+
+#custom-osd.brightness {
+	color: #f9dca1;
+}
+
+#custom-osd.muted {
+	color: #a167a5;
+}

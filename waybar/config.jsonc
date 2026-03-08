@@ -20,6 +20,8 @@
 	"modules-right": [
 		"tray",
 		"custom/separator",
+		"custom/weather",
+		"bluetooth",
 		"network",
 		"pulseaudio",
 		"battery",
@@ -71,13 +73,13 @@
 		"max-length": 30,
 		"format-icons": {
 			"spotify": "󰓇",
-			"default": ""
+			"google-chrome": ""
 		},
 		"escape": true,
-		"exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
+		"exec": "python3  $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
 		"on-click": "playerctl play-pause",
-		"on-scroll-left": "$HOME/.config/waybar/scripts/playerctl.sh previous",
-		"on-scroll-right": "$HOME/.config/waybar/scripts/playerctl.sh next"
+		"on-scroll-left": " $HOME/.config/waybar/scripts/playerctl.sh previous",
+		"on-scroll-right": " $HOME/.config/waybar/scripts/playerctl.sh next"
 	},
 	"pulseaudio": {
 		"format": "{icon}",
@@ -129,7 +131,7 @@
 	"custom/power": {
 		"format": "⏻",
 		"tooltip": false,
-		"on-click": "$HOME/.config/waybar/scripts/powermenu.sh"
+		"on-click": " $HOME/.config/waybar/scripts/powermenu.sh"
 	},
 	"clock": {
 		"format": "{:%I:%M %p\n%m/%d/%y}",
@@ -171,5 +173,22 @@
 	"tray": {
 		"icon-size": 16,
 		"spacing": 8
+	},
+	"custom/weather": {
+		"format": "{}",
+		"return-type": "json",
+		"exec": "python3 $HOME/.config/waybar/scripts/weather.py",
+		"tooltip": true
+	},
+	"bluetooth": {
+		"format": "󰂯",
+		"format-connected": "󰂱 {num_connections}",
+		"format-disabled": "󰂲",
+		"format-off": "",
+		"tooltip-format": "{controller_alias}\n{status}",
+		"tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "  {device_alias}",
+		"tooltip-format-enumerate-connected-battery": "  {device_alias}  {device_battery_percentage}%",
+		"on-click": "blueman-manager"
 	}
 }

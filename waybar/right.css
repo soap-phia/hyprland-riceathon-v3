@@ -1,4 +1,6 @@
 #tray,
+#custom-weather,
+#bluetooth,
 #network,
 #pulseaudio,
 #battery,
@@ -26,7 +28,6 @@
 
 #battery.critical {
 	color: #f38fad;
-	animation: blink 1s linear infinite;
 }
 
 #battery.charging {
@@ -62,4 +63,41 @@
 	color: #fde8ff;
 	background: #3d2740;
 	border-radius: 12px;
+}
+
+#custom-weather {
+	color: #98def0;
+}
+
+#custom-weather.cloudy {
+	color: #bcbaef;
+}
+
+#custom-weather.rainy {
+	color: #95a9f5;
+}
+
+#custom-weather.stormy {
+	color: #f9dca1;
+}
+
+#custom-weather.snowy {
+	color: #f8e0f9;
+}
+
+#custom-weather.disconnected {
+	color: #a167a5;
+}
+
+#bluetooth {
+	color: #95a9f5;
+}
+
+#bluetooth.connected {
+	color: #bcbaef;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+	color: #a167a5;
 }

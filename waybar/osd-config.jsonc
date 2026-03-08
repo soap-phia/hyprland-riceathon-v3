@@ -1,0 +1,23 @@
+{
+	"layer": "overlay",
+	"position": "bottom",
+	"height": 42,
+	"margin-bottom": 12,
+	"margin-left": 12,
+	"margin-right": 12,
+	"spacing": 0,
+	"fixed-center": true,
+	"exclusive": false,
+	"passthrough": true,
+	"modules-center": [
+		"custom/osd"
+	],
+	"custom/osd": {
+		"format": "{}",
+		"return-type": "json",
+		"exec": "echo \"$osd\"",
+		"interval": "once",
+		"signal": 8,
+		"tooltip": false
+	}
+}

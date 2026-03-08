@@ -3,9 +3,17 @@ import re
 import subprocess
 import sys
 
-KEYBINDS_FILE = os.path.expanduser("$HOME/.config/hypr/keybinds.conf")
-VAR_FILE = os.path.expanduser("$HOME/.config/hypr/variables.conf")
+KEYBINDS_FILE = os.path.expanduser("~/.config/hypr/keybinds.conf")
+VAR_FILE = os.path.expanduser("~/.config/hypr/variables.conf")
 SEP = "\x1f"
+
+vars = {}
+with open(VAR_FILE) as var_file:
+	for line in var_file:
+		line = line.strip()
+		if line.startswith("$") and "=" in line:
+			key, _, value = line.partition(" = ")
+			vars[key.strip()] = value.strip()
 
 MOD_REPLACEMENTS = {
 	"$mod": "Win",
@@ -143,14 +151,6 @@ def parse_keybinds():
 				dispatch_cmd = f"{args}"
 			else:
 				dispatch_cmd = f"hyprctl dispatch {dispatcher} {args}"
-    
-			vars = {}
-			with open(VAR_FILE) as var_file:
-				for line in var_file:
-					line = line.strip()
-					if line.startswith("$") and "=" in line:
-						key, _, value = line.partition(" = ")
-						vars[key.strip()] = value.strip()
 
 			for key, value in vars.items():
 				dispatch_cmd = dispatch_cmd.replace(key, value)
@@ -177,7 +177,7 @@ def main():
 			"-p",
 			"Keybinds",
 			"-theme",
-			os.path.expanduser("$HOME/.config/rofi/help.rasi"),
+			os.path.expanduser("~/.config/rofi/help.rasi"),
 			"-no-custom",
 			"-format",
 			"i",

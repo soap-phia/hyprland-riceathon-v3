@@ -48,7 +48,6 @@
 #workspaces button.urgent {
 	color: #f38fad;
 	background: #3d2740;
-	animation: blink 1s linear infinite;
 }
 
 #window {
